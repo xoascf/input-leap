@@ -55,6 +55,8 @@ if exist bin\Debug (
     copy ..\res\openssl\input-leap.conf bin\Debug\ > NUL
     mkdir bin\Debug\platforms
     copy %B_QT_FULLPATH%\plugins\platforms\qwindowsd.dll bin\Debug\platforms\ > NUL
+    mkdir bin\Debug\styles
+    copy %B_QT_FULLPATH%\plugins\styles\qwindowsvistastyled.dll bin\Debug\styles\ > NUL
 ) else if exist bin\Release (
     copy %B_QT_FULLPATH%\bin\Qt5Core.dll bin\Release\ > NUL
     copy %B_QT_FULLPATH%\bin\Qt5Gui.dll bin\Release\ > NUL
@@ -65,6 +67,8 @@ if exist bin\Debug (
     copy ..\res\openssl\input-leap.conf bin\Release\ > NUL
     mkdir bin\Release\platforms
     copy %B_QT_FULLPATH%\plugins\platforms\qwindows.dll bin\Release\platforms\ > NUL
+    mkdir bin\Release\styles
+    copy %B_QT_FULLPATH%\plugins\styles\qwindowsvistastyle.dll bin\Release\styles\ > NUL
 ) else (
     echo Remember to copy supporting binaries and configuration files!
 )
